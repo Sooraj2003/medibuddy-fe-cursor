@@ -19,11 +19,11 @@ const Service = () => {
     
 
   return (
-    <div className="flex flex-wrap justify-center items-center gap-10 md:gap-40 p-4 h-full my-8">
+    <div className="flex flex-wrap justify-center items-center gap-6 md:gap-x-40 md:gap-y-20 p-2 md:p-4 h-full my-8">
     {services?.map((service, index) => {
       const { iconText, iconUrl } = service;
       return (
-        <div key={index} className="flex flex-col items-center">
+        <div key={index} className="flex flex-col items-center w-24 md:w-60 text-center">
           <img src={iconUrl} alt={iconText} className=" md:w-48 md:h-48" />
           <span className="text-sm md:text-3xl font-medium mt-2">{iconText}</span>
         </div>

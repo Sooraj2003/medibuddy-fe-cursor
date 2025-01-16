@@ -36,9 +36,9 @@ const ReviewCarousel = () => {
 
   // Render the carousel
   return (
-    <div className="w-full text-center my-10 p-5">
-        <h1 className="text-5xl font-bold">{reviewObject?.title}</h1>
-    <div className="w-full h-full  py-10 flex justify-center items-center">
+    <div className="w-full text-center my-8 md:my-10 p-2 md:p-5">
+        <h1 className="text-2xl md:text-5xl font-bold">{reviewObject?.title}</h1>
+    <div className="w-full h-full  py-5 md:py-10 flex justify-center items-center">
         
       {reviews?.length > 0 ? (
         <div className="relative w-full max-w-6xl">
@@ -50,7 +50,7 @@ const ReviewCarousel = () => {
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="flex-none m-3 w-full px-4 py-11 text-center bg-gray-100 shadow-md rounded-lg"
+                className="flex-none m-1 md:m-3 w-full px-4 py-11 text-center bg-gray-100 shadow-md rounded-lg"
               >
                 {/* Review Content */}
                 <div className="p-6">
@@ -58,7 +58,7 @@ const ReviewCarousel = () => {
                   <div className="flex justify-between text-gray-500 mb-4">
                     <span>{review.daysAgo || "2"} days ago</span>
                     {/* Star Rating */}
-                  <div className="text-yellow-400 text-xl mb-2">
+                  <div className="text-yellow-400 text-md md:text-xl mb-2">
                     {"★".repeat(review.rating)}
                     {"☆".repeat(5 - review.rating)}
                   </div>
@@ -68,12 +68,12 @@ const ReviewCarousel = () => {
                   
 
                   {/* Review Content */}
-                  <p className="text-gray-700 mb-4 text-xl">{review.content}</p>
+                  <p className="text-gray-700 mb-2 md:mb-4 text-xs md:text-xl">{review.content}</p>
 
                   <div className="divider"></div>
 
                   {/* User Name */}
-                  <h2 className="relative font-bold text-lg text-gray-800 top-10">
+                  <h2 className="relative font-bold text-md md:text-lg text-gray-800 top-10">
                     {review.name}
                   </h2>
                 </div>

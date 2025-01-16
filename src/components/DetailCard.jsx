@@ -17,21 +17,21 @@ const DetailCard = ({ pack }) => {
   } = pack;
 
   return (
-    <div className="card min-w-96 bg-base-200 shadow-md my-5 py-5 rounded-2xl ">
+    <div className="card min-w-60 md:min-w-96 bg-white shadow-md my-4 md:my-5 py-2 md:py-5 rounded-2xl ">
       <div className="card-body">
         {/* Package Display Name */}
-        <h2 className="card-title text-2xl font-semibold">
+        <h2 className="card-title text-sm md:text-2xl font-semibold">
           {packageDisplayName || "No Package Name Available"}
         </h2>
 
         {/* Reports TAT */}
-        {reportsTatText && <p className="text-blue-500">{reportsTatText}</p>}
+        {reportsTatText && <p className="text-blue-500 text-xs md:text-lg">{reportsTatText}</p>}
 
         {/* Test Details */}
-        <div className="flex justify-between items-start mt-4">
+        <div className="flex justify-between items-start  md:mt-4">
           <div>
-            <h1 className="text-lg font-semibold">{testCount || 0} Tests</h1>
-            <ul className="list-disc ml-8">
+            <h1 className="text-sm md:text-lg font-semibold">{testCount || 0} Tests</h1>
+            <ul className="list-disc ml-8 text-xs md:text-sm">
               {subCategories && subCategories.length > 0 ? (
                 subCategories.slice(0, 3).map((category, index) => (
                   <li key={index}>{category}</li>
@@ -42,30 +42,30 @@ const DetailCard = ({ pack }) => {
             </ul>
           </div>
           <div>
-            <h1 className="text-lg font-semibold">Includes</h1>
-            <p>Radiology</p>
+            <h1 className="text-sm md:text-lg font-semibold">Includes</h1>
+            <p className="text-xs md:text-sm">Radiology</p>
           </div>
         </div>
 
         {/* Additional Information */}
         <div className="flex justify-between items-center bg-gray-300 p-3 rounded-md mt-4">
           <div>
-            <h1 className="text-lg font-semibold">Fasting</h1>
-            <p>{fastingHoursText || "Not Required"}</p>
+            <h1 className="text-sm md:text-lg font-semibold">Fasting</h1>
+            <p className="text-xs md:text-sm">{fastingHoursText || "Not Required"}</p>
           </div>
           <div>
-            <h1 className="text-lg font-semibold">Available</h1>
-            <p>{currentVisitType || "Not Specified"}</p>
+            <h1 className="text-sm md:text-lg font-semibold">Available</h1>
+            <p className="text-xs md:text-sm">{currentVisitType || "Not Specified"}</p>
           </div>
         </div>
 
         {/* Pricing and Action */}
         <div className="flex justify-between items-center mt-4">
-          <h1 className="text-xl font-bold">Rs {price || "N/A"}</h1>
-          <button className="btn btn-outline px-9 btn-success flex items-center">
-            <span className="px-2">+</span>
-            <span className="px-4">1</span>
-            <span className="px-2">-</span>
+          <h1 className="text-md md:text-xl font-bold">Rs {price || "N/A"}</h1>
+          <button className="btn btn-outline px-2 md:px-9 btn-success flex items-center">
+            <span className="px-1 md:px-2">+</span>
+            <span className="px-2 md:px-4">1</span>
+            <span className="px-1 md:px-2">-</span>
           </button>
         </div>
       </div>

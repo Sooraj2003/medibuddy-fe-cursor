@@ -19,9 +19,9 @@ const LifeStyleComponent = () => {
     },[])
      
   return (
-    <div className="w-full mx-auto text-center my-14">
-      <h1 className="text-5xl font-bold mb-7">{lifeStyle?.title}</h1>
-      <div className="flex flex-wrap gap-4 justify-center">
+    <div className="w-full mx-auto text-center my-6 md:my-14">
+      <h1 className="text-2xl md:text-5xl font-bold mb-3 md:mb-7">{lifeStyle?.title}</h1>
+      <div className="flex flex-wrap gap-2 md:gap-4 justify-center">
      {lifeStyle?.props?.map((card,index)=>{
         return <LifeStyle key={index} card={card}/>
      })}

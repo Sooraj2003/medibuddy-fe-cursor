@@ -18,7 +18,7 @@ const Banner = () => {
       fetchBanners();
     },[])
   return (
-    <div className="flex justify-center items-center my-28 ">
+    <div className="flex justify-center items-center w-full my-14 md:my-28 ">
         {banners && <Carousel banners={banners} />}
     </div>
   )

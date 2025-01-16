@@ -4,11 +4,17 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
   <div className="flex-1">
-    <a className=""><div className="flex flex-col"><span className="text-lg font-semibold">Bengaluru,Karnataka <img className="inline-block " src="src\assets\gps.png"/></span><span className="text-sm font-medium">Kodipalya</span></div></a>
+    <div className="flex justify-between items-center gap-2">
+      <div className="w-8 md:w-12">
+        <img className="w-full"src="src\assets\arrow-left.svg" />
+      </div>
+    <div className="flex flex-col"><span className="text-sm md:text-2xl font-semibold">Bengaluru,Karnataka <img className="inline-block w-4 md:w-8 " src="src\assets\Location GPS.svg"/></span><span className="text-xs md:text-lg font-medium">Kodipalya</span></div>
+    </div>
+    
   </div>
-  <div className="flex">
-    <img className="w-12 h-8" src="src\assets\wallet.png"/>
-    <img className="w-8 h-8" src="src\assets\Cart.png"/>
+  <div className="flex gap-4">
+    <img className="w-8 md:w-10 " src="src\assets\Wallet.svg"/>
+    <img className="w-8 md:w-10" src="src\assets\Cart.svg"/>
     
   </div>
 </div>

@@ -18,14 +18,14 @@ const QaComponent = () => {
     },[])
   return faqs && (
 <div className="w-full text-left my-11">
-    <h1 className="text-5xl font-bold">Frequently Asked Questions</h1>
+    <h1 className="text-2xl md:text-5xl font-bold">Frequently Asked Questions</h1>
     {faqs?.map((faq)=>{
         return <>
-        <div className="collapse collapse-plus bg-base-200 my-6">
+        <div className="collapse collapse-plus bg-base-200 my-3 md:my-6">
   <input type="radio" name="my-accordion-3"  />
-  <div className="collapse-title text-xl font-medium">{faq?.question}</div>
+  <div className="collapse-title text-sm md:text-xl font-medium">{faq?.question}</div>
   <div className="collapse-content">
-    <p>{faq?.answer || defaultAnswer}</p>
+    <p className="text-xs md:text-md text-slate-500">  {faq?.answer || defaultAnswer}</p>
 </div>
 </div>
         </>
