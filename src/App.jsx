@@ -14,7 +14,7 @@ function App() {
 
 
   return (
-    <div className="m-9 overflow-hidden">
+    <div className="m-9 overflow-hidden bg-white">
       <Navbar/>
       <SearchBar/>
       <Service/>
