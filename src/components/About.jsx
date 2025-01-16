@@ -4,7 +4,7 @@ const About = () => {
   <figure>
     <img
     className="w-full md:w-2/3 mx-auto"
-      src="src\assets\about.svg"
+      src="public\assets\about.svg"
       alt="Shoes" />
   </figure>
   

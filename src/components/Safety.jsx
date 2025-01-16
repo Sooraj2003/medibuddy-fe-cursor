@@ -4,7 +4,7 @@ const Safety = () => {
     <figure>
       <img
       className="w-full md:w-2/3"
-        src="src\assets\safety.svg"
+        src="public\assets\safety.svg"
         alt="Shoes" />
     </figure>
     
