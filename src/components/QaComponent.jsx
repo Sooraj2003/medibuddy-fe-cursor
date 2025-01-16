@@ -25,7 +25,7 @@ const QaComponent = () => {
   <input type="radio" name="my-accordion-3"  />
   <div className="collapse-title text-sm md:text-xl font-medium">{faq?.question}</div>
   <div className="collapse-content">
-    <p className="text-xs md:text-md text-slate-500">  {faq?.answer || defaultAnswer}</p>
+    <p className="text-xs md:text-lg text-slate-500">  {faq?.answer || defaultAnswer}</p>
 </div>
 </div>
         </>
