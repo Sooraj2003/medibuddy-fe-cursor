@@ -1,4 +1,3 @@
-import gpsLogo from "../assets/gps.svg"
 
 const Navbar = () => {
   return (
@@ -8,7 +7,7 @@ const Navbar = () => {
       <div className="w-8 md:w-12">
         <img className="w-full"src="src\assets\arrow-left.svg" />
       </div>
-    <div className="flex flex-col"><span className="text-sm md:text-2xl font-semibold">Bengaluru,Karnataka <img className="inline-block w-4 md:w-8 " src={gpsLogo}/></span><span className="text-xs md:text-lg font-medium">Kodipalya</span></div>
+    <div className="flex flex-col"><span className="text-sm md:text-2xl font-semibold">Bengaluru,Karnataka <img className="inline-block w-4 md:w-8 " src="public\assets\gps.svg"/></span><span className="text-xs md:text-lg font-medium">Kodipalya</span></div>
     </div>
     
   </div>
