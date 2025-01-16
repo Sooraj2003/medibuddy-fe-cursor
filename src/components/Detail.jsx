@@ -10,9 +10,6 @@ const Detail = () => {
     const detail = useSelector((store)=>store.detail);
     const packages=detail?.props[0]?.packages;
 
-     console.log(packages);
-     
-    
     
     const fetchDetail = async()=>{
       const res = await axios.get("https://677f757b0476123f76a68a42.mockapi.io/api/labs/v1/page_config");
