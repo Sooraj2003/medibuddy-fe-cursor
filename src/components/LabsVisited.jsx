@@ -10,7 +10,7 @@ const LabsVisited = ({data}) => {
   </figure>
   <div className="card-body">
     <h2 className="card-title font-bold">{name}</h2>
-    <p className="text-sm md:text-lg text-slate-600"><img className="inline-block mx-0 md:mx-1" src="src\assets\Location GPS.svg"/>{location}</p>
+    <p className="text-sm md:text-lg text-slate-600"><img className="inline-block mx-0 md:mx-1" src="/assets/gps.svg"/>{location}</p>
     
   </div>
 </div>
