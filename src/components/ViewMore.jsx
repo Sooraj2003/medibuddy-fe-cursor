@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom"
 import LabsVisited from "./LabsVisited"
 
-const Labs = () => {
+const ViewMore = () => {
 
 
        const dummyData = [
@@ -37,10 +36,10 @@ const Labs = () => {
     <div className="w-full my-14 md:my-24">
         <div className="flex justify-between items-center">
         <h1 className="text-2xl md:text-5xl font-bold my-6 md:my-14">Labs Visited</h1>
-        <Link to="/viewmore" className="text-lg md:text-2xl font-semibold text-blue-500 cursor-pointer">View more</Link>
+        
         </div>
         
-        <div className=" w-screen flex my-0  gap-x-10 overflow-scroll">
+        <div className=" w-screen flex flex-wrap gap-10 my-0  gap-x-10 overflow-scroll">
         {dummyData?.map((data,index)=>{
             return <LabsVisited key={index}data={data}/>
         })}
@@ -50,4 +49,4 @@ const Labs = () => {
   )
 }
 
-export default Labs
+export default ViewMore;
