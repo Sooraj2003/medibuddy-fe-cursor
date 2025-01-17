@@ -1,9 +1,21 @@
+import { useDispatch, useSelector } from "react-redux";
+import { decCount, incCount } from "../utils/countSlice";
 
 
-const DetailCard = ({ pack }) => {
+const DetailCard = ({ pack,index }) => {
+  const dispatch = useDispatch();
+  const count = useSelector((store)=>store.count);
   if (!pack) return <h1>ddad</h1>; // Safeguard against undefined or null props
 
-  console.log(pack);
+ 
+
+  const handleIncrement = (index)=>{
+    dispatch(incCount(index));
+  }
+
+  const handleDecrement = (index)=>{
+    dispatch(decCount(index));
+  }
   
 
   const {
@@ -61,11 +73,11 @@ const DetailCard = ({ pack }) => {
 
         {/* Pricing and Action */}
         <div className="flex justify-between items-center mt-4">
-          <h1 className="text-md md:text-xl font-bold">Rs {price || "N/A"}</h1>
+          <h1 className="text-md md:text-xl font-bold">Rs {count.index==index ? price*count?.count : price || "N/A"}</h1>
           <button className="btn btn-outline px-2 md:px-9 btn-success flex items-center">
-            <span className="px-1 md:px-2">+</span>
-            <span className="px-2 md:px-4">1</span>
-            <span className="px-1 md:px-2">-</span>
+            <span className="px-1 md:px-2" onClick={()=>handleIncrement(index)}>+</span>
+            <span className="px-2 md:px-4">{count.index==index ? count.count : "1"}</span>
+            <span className="px-1 md:px-2" onClick={()=>handleDecrement(index)}>-</span>
           </button>
         </div>
       </div>

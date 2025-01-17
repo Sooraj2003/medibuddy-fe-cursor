@@ -5,6 +5,7 @@ import detailReducer from "../utils/detailSlice"
 import lifestyleReducer from "../utils/lifestyleSlice"
 import reviewReducer from "../utils/reviewSlice"
 import faqsReducer from "../utils/faqSlice"
+import countReducer from "../utils/countSlice"
 
 
 const appStore = configureStore({
@@ -14,7 +15,8 @@ const appStore = configureStore({
      detail:detailReducer,
      lifeStyle:lifestyleReducer,
      reviews:reviewReducer,
-     faqs:faqsReducer
+     faqs:faqsReducer,
+     count:countReducer
    }
 })
 

@@ -31,7 +31,7 @@ const Detail = () => {
             <ButtonCategories categories={detail?.categories?.["10386"]} />
             <div className="w-screen flex gap-11 overflow-scroll">
             {packages?.map((pack,index)=>{
-               return <DetailCard key={index} pack={pack}/>
+               return <DetailCard key={index} index={index} pack={pack}/>
             })}
             </div>
           </div>
