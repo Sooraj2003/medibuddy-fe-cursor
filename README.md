@@ -1,4 +1,3 @@
-
 # MediBuddy Assignment Frontend
 
 This repository contains the frontend for the MediBuddy assignment, built with **Vite** and **React**. The application uses modern libraries for state management, API handling, styling, and pre-designed UI components.
@@ -13,10 +12,11 @@ This repository contains the frontend for the MediBuddy assignment, built with *
 - **Axios**: For handling HTTP requests.
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 - **DaisyUI**: A Tailwind CSS plugin for pre-designed UI components.
+- **React Router DOM**: For routing and navigation within the app.
 
 ---
 
-## 📂 Folder Structure
+## 🗂️ Folder Structure
 
 ```
 medibuddy-assignment-fe/
@@ -83,6 +83,12 @@ The application will be available at [http://localhost:5173](http://localhost:51
 - Tailwind CSS-based plugin for pre-designed UI components.
 - Provides components like buttons, cards, modals, and more.
 - Learn more: [DaisyUI Documentation](https://daisyui.com/)
+
+### 5. **React Router DOM**
+- A library for implementing dynamic routing in React applications.
+- Provides declarative components such as `BrowserRouter`, `Routes`, and `Route` for managing navigation and rendering different pages.
+- Enables nested routes, URL parameters, and custom navigation handling.
+- Learn more: [React Router DOM Documentation](https://reactrouter.com/)
 
 ---
 
