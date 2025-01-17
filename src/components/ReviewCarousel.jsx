@@ -18,7 +18,10 @@ const ReviewCarousel = () => {
   };
 
   useEffect(() => {
-    fetchReview();
+    if(!reviewObject){
+      fetchReview();
+    }
+    
   }, []);
 
   // Next and Previous Handlers
@@ -62,7 +65,7 @@ const ReviewCarousel = () => {
                     {"★".repeat(review.rating)}
                     {"☆".repeat(5 - review.rating)}
                   </div>
-                    <span>{review.location||"Banglore"}</span>
+                    <span>{review.location||"Bangalore"}</span>
                   </div>
 
                   

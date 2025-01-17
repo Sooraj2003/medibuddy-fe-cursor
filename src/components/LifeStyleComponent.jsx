@@ -14,8 +14,12 @@ const LifeStyleComponent = () => {
       const res = await axios.get("https://677f757b0476123f76a68a42.mockapi.io/api/labs/v1/page_config");
       dispatch(addLifeStyle(res?.data[0]?.page_config[3]));
     }
+
+    // fetch the lifestyle data on the initial render
     useEffect(()=>{
+      if(!lifeStyle){
         fetchLifeStyle();
+      }
     },[])
      
   return (

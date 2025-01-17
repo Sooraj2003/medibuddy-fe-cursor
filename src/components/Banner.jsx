@@ -14,9 +14,13 @@ const Banner = () => {
      
       dispatch(addBanners(res?.data[0]?.page_config[1]?.props));
     }
+    //fetch the banner at initial render
     useEffect(()=>{
-      fetchBanners();
+      if(!banners){
+        fetchBanners();
+      } 
     },[])
+    
   return (
     <div className="flex justify-center items-center w-full my-14 md:my-28 ">
         {banners && <Carousel banners={banners} />}

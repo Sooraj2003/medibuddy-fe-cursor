@@ -1,12 +1,13 @@
 const LabsVisited = ({data}) => {
+
     const {name,location,url}=data;
+
   return (
     <div className="card w-2/3 shadow-xl bg-white">
   <figure>
     <img
-    className=""
       src={url}
-      alt="Shoes" />
+      alt="labs" />
   </figure>
   <div className="card-body">
     <h2 className="card-title font-bold">{name}</h2>

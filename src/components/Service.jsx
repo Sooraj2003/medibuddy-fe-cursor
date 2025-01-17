@@ -9,11 +9,13 @@ const Service = () => {
     
     const fetchServices = async()=>{
       const res = await axios.get("https://677f757b0476123f76a68a42.mockapi.io/api/labs/v1/page_config");
-
       dispatch(addServices(res?.data[0]?.page_config[0]?.props));
     }
+    
     useEffect(()=>{
-      fetchServices();
+      if(!services){
+        fetchServices();
+      }
     },[])
 
     

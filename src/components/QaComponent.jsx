@@ -13,8 +13,13 @@ const QaComponent = () => {
       const res = await axios.get("https://677f757b0476123f76a68a42.mockapi.io/api/labs/v1/page_config");
       dispatch(addFaqs(res?.data[0]?.page_config[6]?.props));
     }
+
+    //fetch faqs on initial render
     useEffect(()=>{
+      if(!faqs){
         fetchFaqs();
+      }
+        
     },[])
   return faqs && (
 <div className="w-full text-left my-11">

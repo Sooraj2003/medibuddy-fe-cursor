@@ -3,7 +3,7 @@ import LabsVisited from "./LabsVisited"
 
 const Labs = () => {
 
-
+    // dummy data : as data was not present in the api
        const dummyData = [
         {
         id:1,

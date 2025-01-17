@@ -16,7 +16,10 @@ const ViewAll = () => {
       dispatch(addDetail(res?.data[0]?.page_config[2]));
     }
     useEffect(()=>{
-      fetchDetail();
+        if(!detail){
+            fetchDetail();
+        }
+      
     },[])
      
     

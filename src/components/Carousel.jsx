@@ -1,5 +1,4 @@
 import  { useState } from "react";
-import PropTypes from "prop-types";
 
 const Carousel = ({ banners }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -66,9 +65,6 @@ const Carousel = ({ banners }) => {
   );
 };
 
-// PropTypes Validation
-Carousel.propTypes = {
-  banners: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+
 
 export default Carousel;
