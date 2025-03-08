@@ -91,14 +91,12 @@ const Detail = () => {
               <div className="w-full overflow-x-hidden px-0 md:px-14">
                 <div 
                   ref={containerRef}
-                  className="flex snap-x snap-mandatory md:snap-none gap-0 md:gap-6 pb-8 pt-2 scroll-smooth overflow-x-auto no-scrollbar"
+                  className="flex snap-x snap-mandatory md:snap-none gap-4 md:gap-6 pb-8 pt-2 scroll-smooth overflow-x-auto no-scrollbar"
                 >
                   {packages?.map((pack,index)=>{
                      return (
-                       <div key={index} className="snap-center w-screen md:w-auto flex-shrink-0 md:flex-shrink">
-                         <div className="px-4 md:px-0">
-                           <DetailCard index={index} pack={pack}/>
-                         </div>
+                       <div key={index} className="snap-center w-[calc(100%-2rem)] md:w-auto flex-shrink-0 md:flex-shrink px-4 md:px-0">
+                         <DetailCard index={index} pack={pack}/>
                        </div>
                      )
                   })}

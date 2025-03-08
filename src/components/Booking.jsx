@@ -66,12 +66,12 @@ const Booking = () => {
   return (
     <div className="w-full bg-[#FFFFFF] px-4 md:px-10 py-6 md:py-10">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-[#000B1C] text-[32px] font-bold leading-tight">
+        <h1 className="text-[24px] md:text-[32px] font-bold leading-tight text-[#000B1C]">
           Your Active Bookings
         </h1>
         <a 
           href="#viewall"
-          className="text-[#4285F4] text-[18px] font-medium hover:underline"
+          className="text-[#4285F4] text-[14px] md:text-[18px] font-medium hover:underline"
         >
           View All
         </a>
