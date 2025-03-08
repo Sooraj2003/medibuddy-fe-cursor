@@ -12,6 +12,8 @@ import SearchBar from "./components/SearchBar";
 import Service from "./components/Service";
 import ViewAll from "./components/ViewAll";
 import ViewMore from "./components/ViewMore";
+import Booking from "./components/Booking";
+import PopularLabTest from "./components/PopularLabTest";
 
 function App() {
   return (
@@ -20,18 +22,22 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="m-9 overflow-hidden">
+            <div>
               <Navbar />
-              <SearchBar />
-              <Service />
-              <Banner />
-              <Detail />
-              <Labs />
-              <About />
-              <ReviewCarousel />
-              <LifeStyleComponent />
-              <Safety />
-              <QaComponent />
+              <div className="pt-[72px] md:pt-[80px] px-4 md:px-10">
+                <SearchBar />
+                <Service />
+                <Banner />
+                <Detail />
+                <Booking />
+                <PopularLabTest />
+                <Labs />
+                <About />
+                <ReviewCarousel />
+                <LifeStyleComponent />
+                <Safety />
+                <QaComponent />
+              </div>
             </div>
           }
         />

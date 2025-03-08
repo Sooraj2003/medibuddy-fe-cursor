@@ -6,6 +6,8 @@ import lifestyleReducer from "../utils/lifestyleSlice"
 import reviewReducer from "../utils/reviewSlice"
 import faqsReducer from "../utils/faqSlice"
 import countReducer from "../utils/countSlice"
+import bookingSlice from "./bookingSlice"
+import labTestsSlice from "./labTestsSlice"
 
 
 const appStore = configureStore({
@@ -16,8 +18,15 @@ const appStore = configureStore({
      lifeStyle:lifestyleReducer,
      reviews:reviewReducer,
      faqs:faqsReducer,
-     count:countReducer
-   }
+     count:countReducer,
+     bookings: bookingSlice,
+     labTests: labTestsSlice
+   },
+   middleware: (getDefaultMiddleware) =>
+     getDefaultMiddleware({
+       serializableCheck: false,
+     }),
+   devTools: process.env.NODE_ENV !== "production",
 })
 
 export default appStore;
